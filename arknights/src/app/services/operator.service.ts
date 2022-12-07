@@ -2,12 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Lore, Root } from '../models/operator.model';
+import { Root } from '../models/operator.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherService {
+export class OperatorService {
 
   constructor(private http: HttpClient) { }
 

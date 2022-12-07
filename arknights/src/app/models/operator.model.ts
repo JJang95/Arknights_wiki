@@ -75,7 +75,7 @@ export interface Lore {
     Birthday: string
     Race: string
     Height: string
-    "Combat Experience": string
+    "CombatExperience": string
     "Infection Status": string
     "Physical Strength": string
     Mobility: string

@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" *ngIf="operatorData">
   <div class="upper-data">
-    <img src="https://gamepress.gg/arknights/sites/arknights/files/2019-11/char_220_grani_1.png" alt="">
+    <img src={{operatorData.art.Base}} alt="">
 
     <div class="char-data">
-      <div class="name">Grani</div>
+      <div class="name">{{operatorData.name}}</div>
       <img class="location mt" src="../assets/Location/Victoria.png" alt="">
     </div>
   </div>
@@ -11,8 +11,7 @@
     <div class="more-info-label mb-1">Background</div>
 
     <div class="more-info-bio">
-      " Grani, formerly of the Victorian Mounted Police, specializes in high mobility operations such as raids, mechanized warfare, and infiltration. 
-      Now works as a contract Operator providing support for all Rhodes Island op teams, as well as patrols of the island and its surrounding areas. "
+      {{operatorData.biography}}
     </div>
 
     <div class="more-info-container">
@@ -22,7 +21,12 @@
           <span>Rarity</span>
         </div>
         <div class="info-block-value">
-          ★★★★★☆	
+          <div *ngIf = "operatorData.rarity == 1 ">★</div>
+          <div *ngIf = "operatorData.rarity == 2 ">★★</div>
+          <div *ngIf = "operatorData.rarity == 3 ">★★★</div>
+          <div *ngIf = "operatorData.rarity == 4 ">★★★★</div>
+          <div *ngIf = "operatorData.rarity == 5 ">★★★★★</div>
+          <div *ngIf = "operatorData.rarity == 6 ">★★★★★★</div>
         </div>
       </div>
 
@@ -32,7 +36,7 @@
           <span>Affiliation</span>
         </div>
         <div class="info-block-value">
-          Victoria
+          {{operatorData.affiliation[0]}}
         </div>
       </div>
 
@@ -42,7 +46,7 @@
           <span>Class</span>
         </div>
         <div class="info-block-value">
-          Vanguard
+          {{operatorData.class[0]}}
         </div>
       </div>
 
@@ -52,7 +56,7 @@
           <span>Birthday</span>
         </div>
         <div class="info-block-value">
-          Dec. 1
+          {{operatorData.lore.Birthday}}
         </div>
       </div>
 
@@ -68,11 +72,11 @@
 
       <div class="info-block">
         <div class="info-block-label">
-          <img src="../assets/Info/gaming.png" alt="">
-          <span>Experience</span>
+          <img src="../assets/Info/user.png" alt="">
+          <span>Ethnicity</span>
         </div>
         <div class="info-block-value">
-          2 years
+          {{operatorData.lore.Race}}
         </div>
       </div>
     </div>
