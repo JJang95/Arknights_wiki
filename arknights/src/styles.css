@@ -151,6 +151,12 @@ body {
     font-weight: 600;
 }
 
+.sample {
+    color: var(--grey-1);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
 .search {
     margin-bottom: 1em;
     text-align: center;

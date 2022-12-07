@@ -4,13 +4,38 @@
   </form>
 </div>
 
+<div class="sample">
+  <div>Not sure what to search?</div>
+  <div>Try out: "Surtr" or "Ash" as an example.</div>
+</div>
+
 <div class="container" *ngIf="operatorData">
   <div class="upper-data">
     <img src={{operatorData.art.Base}} alt="">
 
     <div class="char-data">
       <div class="name">{{operatorData.name}}</div>
-      <img class="location mt" src="../assets/Location/Victoria.png" alt="">
+      <img class="location mt" src="../assets/Location/Aegir.webp" *ngIf = "operatorData.affiliation[0] == 'Aegir'">
+      <img class="location mt" src="../assets/Location/Babel.webp" *ngIf = "operatorData.affiliation[0] == 'Babel'">
+      <img class="location mt" src="../assets/Location/Bolivar.webp" *ngIf = "operatorData.affiliation[0] == 'Bolivar'">
+      <img class="location mt" src="../assets/Location/Columbia.webp" *ngIf = "operatorData.affiliation[0] == 'Columbia'">
+      <img class="location mt" src="../assets/Location/Higashi.webp" *ngIf = "operatorData.affiliation[0] == 'Higashi'">
+      <img class="location mt" src="../assets/Location/Iberia.webp" *ngIf = "operatorData.affiliation[0] == 'Iberia'">
+      <img class="location mt" src="../assets/Location/Kazimierz.webp" *ngIf = "operatorData.affiliation[0] == 'Kazimierz'">
+      <img class="location mt" src="../assets/Location/Kjerag.webp" *ngIf = "operatorData.affiliation[0] == 'Kjerag'">
+      <img class="location mt" src="../assets/Location/Laterano.webp" *ngIf = "operatorData.affiliation[0] == 'Laterano'">
+      <img class="location mt" src="../assets/Location/Leithania.webp" *ngIf = "operatorData.affiliation[0] == 'Leithania'">
+      <img class="location mt" src="../assets/Location/Lungmen.webp" *ngIf = "operatorData.affiliation[0] == 'Lungmen '">
+      <img class="location mt" src="../assets/Location/Rhodes_Island.webp" *ngIf = "operatorData.affiliation[0] == 'Rhodes Island'">
+      <img class="location mt" src="../assets/Location/Rim_Billiton.webp" *ngIf = "operatorData.affiliation[0] == 'Rim Billiton'">
+      <img class="location mt" src="../assets/Location/Sami.webp" *ngIf = "operatorData.affiliation[0] == 'Sami'">
+      <img class="location mt" src="../assets/Location/Sargon.webp" *ngIf = "operatorData.affiliation[0] == 'Sargon'">
+      <img class="location mt" src="../assets/Location/Siesta.webp" *ngIf = "operatorData.affiliation[0] == 'Siesta'">
+      <img class="location mt" src="../assets/Location/Siracusa.webp" *ngIf = "operatorData.affiliation[0] == 'Siracusa'">
+      <img class="location mt" src="../assets/Location/Team_Rainbow.webp" *ngIf = "operatorData.affiliation[0] == 'Rainbow'">
+      <img class="location mt" src="../assets/Location/Ursus.webp" *ngIf = "operatorData.affiliation[0] == 'Ursus'">
+      <img class="location mt" src="../assets/Location/Victoria.png" *ngIf = "operatorData.affiliation[0] == 'Victoria'">
+      <img class="location mt" src="../assets/Location/Yan.webp" *ngIf = "operatorData.affiliation[0] == 'Yan'">
     </div>
   </div>
   <div class="lower-data">
@@ -72,7 +97,7 @@
           <span>Height</span>
         </div>
         <div class="info-block-value">
-          154cm
+          {{operatorData.lore.Height}}
         </div>
       </div>
 
