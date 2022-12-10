@@ -12,7 +12,7 @@ export class OperatorService {
   constructor(private http: HttpClient) { }
 
   getOperatorData(operatorName: string):Observable<Root>{
-    return this.http.get<Root>(environment.operatorApiBaseUrl+'/operator/'+operatorName);
+    return this.http.get<Root>(environment.operatorApiBaseUrl +'/operator/'+ operatorName);
   }
 }
 

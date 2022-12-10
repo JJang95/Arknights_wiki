@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  operatorApiBaseUrl: 'https://rhodesapi.cyclic.app/api',
+  operatorApiBaseUrl: 'http://localhost:4200',
+  
 
 };
 
